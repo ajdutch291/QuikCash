@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuikCash</title>
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main container for the ATM interface -->
+    <div class="atm-container">
+        <h1>QuikCash ATM</h1>
+        
+        <!-- Display area for the current balance -->
+        <div class="balance-display">
+            <p>Balance: $<span id="balance">0.00</span></p>
+        </div>
+        
+        <!-- Action buttons for Deposit, Withdraw, and Check Balance -->
+        <div class="atm-actions">
+            <button onclick="showDeposit()">Deposit</button>
+            <button onclick="showWithdraw()">Withdraw</button>
+            <button onclick="showBalance()">Check Balance</button>
+        </div>
+        
+        <!-- Form for entering the deposit or withdrawal amount -->
+        <div class="action-form" id="actionForm">
+            <input type="number" id="amount" placeholder="Enter amount" min="0">
+            <button id="submitBtn">Submit</button>
+        </div>
+        
+        <!-- Area to display messages or errors -->
+        <div id="message" class="message"></div>
+    </div>
+    
+    <!-- Link to external JavaScript file for functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
+

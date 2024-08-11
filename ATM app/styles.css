@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.atm-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.atm-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #4e54c8;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.balance-display {
+    margin-bottom: 30px;
+    font-size: 1.6em;
+    color: #007bff;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.atm-actions button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    background-color: #ff4081;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.atm-actions button:hover {
+    background-color: #ff3366;
+    transform: translateY(-4px);
+}
+
+.action-form {
+    margin-top: 25px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.action-form.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.5s ease-out;
+}
+
+.action-form input {
+    padding: 12px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    width: calc(100% - 24px);
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.action-form input:focus {
+    border-color: #ff4081;
+    outline: none;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.action-form button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    background-color: #4caf50;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.action-form button:hover {
+    background-color: #388e3c;
+    transform: translateY(-3px);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #f44336;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.message.show {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
